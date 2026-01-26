@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-size: 24px;
+    background-color: azure;
+}
+#content {
+    max-width: 900px;
+    background-color: brown;
+    margin: 40px auto
+}
+img {
+    width:  50%;
+}
+#title {
+    font-size: 4em;
+}
+
+.shadow {
+    background-color: lightgray;
+}
+p {
+    background-color: white;
+}
