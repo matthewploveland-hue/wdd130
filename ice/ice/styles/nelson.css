@@ -24,6 +24,9 @@ body {
     grid-column: 2/4;
     z-index: 1;
 }
+#hero-msg {
+    
+}
 .quote {
     grid-column: 2;
     position: absolute;
