@@ -9,27 +9,37 @@
     grid-column: 2;
 }
 body {
-    grid-column: 2;
+    background: #FFECD7;
+    margin: 0;
 }
+    
+
 .card-img {
     border: 10px solid #ffffff;
-    /*align-self: center;*/
     grid-column: 2;
     z-index: 1;
-    position: absolute; 
-    width: 200px; 
-    align-items: center;
+    width: 220px; 
 }
-.picture-card {
-    grid-column: 2/4;
-    z-index: 1;
+#hero-msg { 
+    text-align: center;
+
 }
-#hero-msg {
-    
+
+#hero-msg h1 {
+    margin: 0;
+}
+
+#hero-msg h4 {
+    margin: 6px 0 0;
 }
 .quote {
-    grid-column: 2;
-    position: absolute;
+    text-align: center;
+}
+
+.quote h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.35;
 }
 
 #the-card {
@@ -40,4 +50,8 @@ body {
     border: 10px solid #004E63;
     border-radius: 20px;
     grid-column: 2;
+
+    display: grid;
+    justify-items: center;
+    padding: 60px 24px 28px;
 }
