@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*color list*/
+#color {
+color:
+#1A1423 
+#372549
+#774C60
+#B75D69
+#EACDC2
+}
+
 body {
     margin: 0;
     font-size: 24px;
     background-color: azure;
+    font-family: Roboto;
 }
 #content {
     max-width: 900px;
-    background-color: brown;
+    background-color: #EACDC2;
     margin: 40px auto
 }
 img {
@@ -13,6 +25,15 @@ img {
 }
 #title {
     font-size: 4em;
+    font-family: Montserrat;
+}
+
+nav a {
+    padding: 15px 7%;
+    text-align: center;
+    display: inline;
+    font-size: 1.5em;
+    border-radius: 15px;
 }
 
 .shadow {
