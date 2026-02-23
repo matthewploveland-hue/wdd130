@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images of Christ</title>
+    <style>
+        body {
+            background: black;
+        }
+        #wrapper{
+            width: 800px;
+            margin: 0 auto;
+        }
+        nav {
+            color: white;
+            text-align: center;
+            font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #gallery{
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            border: 15px solid rgb(255, 255, 255);
+            width: 100%;
+            background-color: #ddd;
+            background-image:
+                linear-gradient(45deg, #ccc 26%, transparent 26%), 
+                linear-gradient(135deg, #ccc 26%, transparent 26%),
+                linear-gradient(45deg, transparent 75%, #ccc 75%),
+                linear-gradient(135deg, transparent 75%, #ccc 75%);
+            background-size: 20px 20px; /* Must be a square */
+            background-position: 0 0, 10px 0, 10px -10px, 0px 10px; 
+            
+        }
+        #gallery a {
+            cursor: url('images/christus.png'), pointer;
+        }
+        #gallery img {
+            width: 200px;
+            height: 300px;
+            opacity:50%;
+            display:block;
+        }
+        #gallery img:hover{
+            opacity: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav>
+            <h1>Christ Art Gallery</h1>
+        </nav>
+        <main>
+            <div id="gallery">
+                <a href="images/big/img11.jpg"><img src="images/big/img11.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img22.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img33.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img44.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img55.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img66.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img77.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img88.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img99.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img100.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img110.jpg" alt="huge file size" ></a>
+                <a href="images/big/img11.jpg"><img src="images/big/img120.jpg" alt="huge file size" ></a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
