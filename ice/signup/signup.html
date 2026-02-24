@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed</title>
+    
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        body {
+            background: rgb(120, 96, 64);
+        }
+            
+        #myForm {
+            height: 500px;
+            width: 350px;
+            border: solid 10px darkblue;
+            border-radius: 20px;
+            display: grid;
+            background-color: white;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 150px 1fr auto;
+            overflow: hidden;
+            transform: translateX(150px) translateY(150px);
+            
+        }
+        #closeBtn {
+            position: absolute;
+            transform: translateY(10px) translateX(10px);
+        }
+        .hero {
+            grid-row: 1/2;
+            grid-column: 1/-1;
+            position: relative;
+            /* min-height: 200px; */
+        }
+        .hero img { 
+            height: 100%;
+            width: 100%;
+            display: block;
+            object-fit: cover; 
+            object-position: top;
+            display: block;
+            z-index: 1;
+
+        }
+        .hero-text {
+            position: absolute;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            place-content: center; 
+            display: grid;
+            inset: 0;
+            padding-top: 20px;
+            transform: translateY(20px);
+            text-shadow: 1.5px 1.5px black;
+
+        }
+        .fields {
+            grid-row: 2/3;
+            grid-column: 1/-1;
+            font-family: 'Times New Roman';
+            display: grid;
+            grid-template-rows: 50px 1fr;
+            /* grid-template-columns: 120px 1fr; */
+            padding: 10px;
+            
+        }
+        .username, .password, .email {
+            padding: 10px;
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+        }
+        .gender {
+            padding: 5px;
+        }
+        .books {
+            grid-template-columns: repeat(5, 1fr);
+            display: grid;
+            grid-column: 1/6;
+            grid-row: 3/4;
+            gap: 3px;
+        }
+        .old_testament, .new_testament, .book_of_mormon, .doctrine_and_covenants, .pearl_of_great_price {
+            width: 100%;
+            height: auto;
+            /* grid-row: 13/16; */
+        }
+
+        
+        </style>
+
+
+
+
+</head>
+
+<body>
+    <div id="formContainer">
+        <form id="myForm">
+            <div class="hero">
+                <button type="button" id="closeBtn">X</button>
+                <img class="fivekfed" src="images/jesus_feeds_5000.jpeg">
+                <div class="hero-text">
+                    <h1>Daily Feed</h1>
+                    <h2>Scripture a Day</h2>
+                </div>
+            </div>
+            <div class="fields">
+                <h3>Sign Up for Daily Scripture Feed</h3>
+                <div class="username">
+                    <label for="username">User Name:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="password">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="gender"> 
+                    <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                </div>
+
+                <section>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to newsletter</label>
+                </section>
+
+                <section>
+                    <input type="checkbox" id="conditions" name="conditions" required>
+                    <label for="conditions">I acknowledge the terms and conditions</label>
+                </section>
+
+                <section>
+                    <button type="submit">Submit</button>
+                </section>
+            </div>
+            <div class="books">
+                <img class="old_testament" src="images/old_testament.webp">
+                <img class="new_testament" src="images/new_testament.webp">  
+                <img class="book_of_mormon" src="images/book_of_mormon.webp">  
+                <img class="doctrine_and_covenants" src="images/doctrine_and_covenants.webp">  
+                <img class="pearl_of_great_price" src="images/pearl_of_great_price.webp">
+            </div>   
+        </form>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+
+</body>
+
+</html>
