@@ -61,7 +61,7 @@ header {
     display: grid;
     /* grid-template-rows: 100px; */
     grid-template-columns: 180px auto;
-    background: #ccd5ae;
+    background: #4c5041;
     height: 120px;
     width: 100%;
 }
@@ -170,6 +170,68 @@ footer .social img {
     padding: 20px;
     border-radius: 15px;
     background-color: #fefae0;
-    position: relative;
     z-index: 2;
+    position: relative;
+}
+
+/* CSS for ICE PAGE */
+
+.ice-container {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.ice-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 100%;
+    background-color: #faedcd;
+    z-index: -1;
+}
+.iceimages {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+.iceimages img{
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border:solid 15px #d4a373;
+    border-radius: 10px;
+    transition: transform .5s, opacity .8s;
+    
+}
+
+.iceimages a{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    text-decoration: none;
+    
+    
+}
+.iceimages span {
+    display: block;
+    max-width: 500px;
+    margin: 0px auto;
+    line-height: 1.6;
+    color: black;
+}
+.ice-title {
+    color: black;
+}
+.iceimages img:hover{
+    opacity: .95;
+    transform: scale(1.08);
 }
