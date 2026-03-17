@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Bungee&family=Dancing+Script:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.colorss {
+    color: 
+    #FFECD1
+    #001524
+    #15616D
+    #896A67
+
+
+}
+
+
+.home-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+#intro-msg p {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}

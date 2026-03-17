@@ -18,7 +18,45 @@ color:
    #d4a373
         
 }
+#color3 {
+    color:
+    Deep Charcoal — #121212
 
+Soft Black — #1E1E1E
+
+Warm Off-White — #F5F5F5
+
+Muted Sand Accent — #C2A878
+
+Soft Gray — #8E8E8E
+
+🔤 Fonts
+}
+
+#color4 {
+    color:
+    "Midnight Blue" — #1A1F36
+
+"Dusty Lavender" — #6C63FF
+
+"Soft Rose" — #F8C8DC
+
+"Pale Sky" — #E0F0FF
+
+"Cream" — #FAF3E0
+}
+#color5 {
+    color:
+    Deep Forest — #1B4332, #1B2A1F
+
+Warm Clay — #BC6C25, #B36A3C, #2F2A24
+
+Soft Beige — #E9EDC9, #F2EFE8
+
+Muted Sage — #95A87D, #8C9A84
+
+Cream — #F1F5E1
+}
 body {
     margin: auto;
     /* margin: 0; */
