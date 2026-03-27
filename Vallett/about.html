@@ -9,22 +9,24 @@
 </head>
 <body>
     <div id="content">
-        <header> 
-            <a id="logo_link" href="index.html">
-                <img class="logo" src="images/logo.png" alt="Camel Logo">
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="dmscreen.html">DM Screen</a>
-                <a href="about.html">About</a>
-            </nav>  
+        <header>
+            <div class="left-col">
+                <a id="logo_link" href="index.html">
+                    <img class="logo" src="images/logo.png" alt="dnd-logo">
+                </a>
+                <nav>
+                    <a href="index.html">Home</a><br>
+                    <a href="dmscreen.html">DM Screen</a><br>
+                    <a href="about.html">About</a><br>
+                </nav>
+            </div>  
+            <h1>Wizard's Hat DM</h1>
         </header>
         
-        <div id="background"></div>
+        <div id="background">
             <div id="hero">
-            </div>
                 <main class="home-grid">
-                    <div id="intro-msg">
+                    <div id="intro-msg-info">
                         <p> We here at Wizard Hat are always looking for feedback on how to 
                             improve the website. Put in your name, email, and message you would 
                             like to send us. It will be read over by a real human being and 
@@ -34,31 +36,36 @@
                             little more on a resume. 
                             
                             We appreciate the time you take to help us out.</p>
-                        </div>
-                    <div id="home-img">
-                        <img src="images/dice.png" alt="dnd dice">
                     </div>
-                    <form action="/action_page.php">
-                        <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="name" value=""><br>
-                        <label for="email">Email:</label><br>
-                        <input type="text" id="email" name="email" value=""><br>
-                        <label for="msg">Message:</label><br>
-                        <input type="text" id="msg" name="msg" value=""><br>
+                    <div id="home-img-info">
+                        <img src="images/helmet.png" alt="dnd dice">
+                    </div>
+
+                    <form class='input' action="/action_page.php">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" value="">
+
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" value="">
+
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="msg"></textarea>
                         <input type="submit" value="Send">
+
                     </form> 
                         
                         
-                    </div>
                     
                 </main>
+            </div>
         </div> 
         
+        <div id="gradient-bar"></div> 
         <footer>
             <div class="social">
                 <p>Wizard Hat DM, 2026 - Trevin Vallett</p>
-                <a href="https://youtube.com" target="_blank">
-                    <img src="images/youtube.png" alt="youtube icon">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
                 </a>
                 <a href="https://facebook.com" target="_blank">
                     <img src="images/facebook.png" alt="facebook icon">
@@ -66,6 +73,8 @@
                 <a href="https://twitter.com" target="_blank">
                     <img src="images/twitter.png" alt="twitter icon">
                 </a>
+
+            
             </div>
         </footer>
 </body>

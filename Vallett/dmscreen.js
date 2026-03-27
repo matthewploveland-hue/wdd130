@@ -114,7 +114,7 @@ const data = [
 ];
 
 let activeCat = 0;
-let activeTab = 0;
+let activeTab = 1;
 
 function renderAll() {
     document.getElementById('cat-list').innerHTML = data.map((d, i) =>
@@ -122,8 +122,8 @@ function renderAll() {
     ).join('');
 
     document.getElementById('tabs').innerHTML = `
-    <div class="tab${activeTab === 0 ? ' active' : ''}" onclick="selectTab(0)">List</div>
     <div class="tab${activeTab === 1 ? ' active' : ''}" onclick="selectTab(1)">Description</div>
+    <div class="tab${activeTab === 0 ? ' active' : ''}" onclick="selectTab(0)">List</div>
     `;
 
     const cat = data[activeCat];
